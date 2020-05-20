@@ -1,3 +1,5 @@
+
+
 ### PHP MD
 
 
@@ -22,7 +24,42 @@ composer install
 
 
 
+- Command line usage
+
+Type `phpmd [filename|directory] [report format] [ruleset file]`, i.e:
+
+````bash
+$ ./vendor/bin/phpmd ./LGU+/ text ./custom/ruleset.xml 
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:101  The class Services_JSON has an overall complexity of 122 which is very high. The configured complexity threshold is 50.
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:101  The class Services_JSON is not named in CamelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:117  The method Services_JSON is not named in camelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:117  Classes should not have a constructor method with the same name as the class
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:200  The method encode() has a Cyclomatic Complexity of 36. The configured cyclomatic complexity threshold is 10.
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:200  The method encode() has 160 lines of code. Current threshold is set to 100. Avoid really long methods.
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:200  The variable $strlen_var is not named in camelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:200  The variable $strlen_var is not named in camelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/lgdacom/JSON.php:200  The variable $ord_var_c is not named in camelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/src/XPayClient.php:1055       The variable $UnPaddString is not named in camelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/src/XPayClient.php:1055       The variable $UnPaddString is not named in camelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/src/XPayClient.php:1055       The method DecodeAndDecrypt is not named in camelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/src/XPayClient.php:1055       Avoid excessively long variable names like $EncryptAndEncodeBuffer. Keep variable name length under 20.
+/Users/littlefox/PhpstormProjects/pg/LGU+/src/XPayClient.php:1081       The method pkcs5_pad is not named in camelCase.
+/Users/littlefox/PhpstormProjects/pg/LGU+/src/XPayClient.php:1095       The method pkcs5_unpad is not named in camelCase.
+
+# 크헉..-_-;;; 이건 내가 짠 소스는 아니니까 ㅋ
+````
+
+
+
+- PhpStorm 셋팅하기
+
+  
+
 ![setup phpstorm](https://tva1.sinaimg.cn/large/007S8ZIlgy1geyvz7glrhj30y90q7tfy.jpg)
+
+
+
+![Inspections setup](https://tva1.sinaimg.cn/large/007S8ZIlgy1geywrm0xkij30pw0c0go9.jpg)
 
 
 
