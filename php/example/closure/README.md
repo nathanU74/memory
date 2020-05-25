@@ -13,7 +13,7 @@ public function getViaCache($key, callable $callback = null, $useCache = true) {
     } else {
       $newCacheData = call_user_func($callback);
       if ($useCache) {
-        $this->memcached()->set($cv->key, $newCacheData, $cv->ttl);
+        $this->memcached()->set($key, $newCacheData, $ttl);
       }
     }
   }
