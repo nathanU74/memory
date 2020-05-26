@@ -231,3 +231,12 @@ fi
 ---
 
 ###### 일단 요기까지 끄읕....
+
+#### 메모리 부족 현상을 부딪히게 된다면?
+````bash
+Fatal error: Allowed memory size....
+
+# -d memory_limit=256 메모리 옵션을 주고 실행하자..
+$ phpcs -d memory_limit=256M --standard=PSR12 --extensions=php --ignore=vendor path/to/code
+
+````
