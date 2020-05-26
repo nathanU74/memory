@@ -27,6 +27,8 @@ composer require-dev "squizlabs/php_codesniffer=*"
 > 검사 파일의 줄번호와 함께 발견되는 규칙위반 메시지를 출력한다.
 >
 > 해당 메시지에 대한 정보는 [여기](https://ujuc.github.io/2019/02/05/psr-2:_coding_style_guide/)를 참조
+>
+> [command line usage](https://www.drupal.org/docs/8/modules/code-review-module/php-codesniffer-command-line-usage)
 
 ````bash
 # 단일 파일 검사
@@ -135,7 +137,7 @@ re-staging updated files
 
 ````
 
-설정을 해보자
+###### 설정을 해보자
 
 ````bash
 $ cd .git/hooks
@@ -161,7 +163,7 @@ total 112
 
 
 
-아래 코드는 찾아보니 있더라.. 약간 수정으로 사용가능.. [참고](https://robjmills.co.uk/2018/01/14/automatic-psr2-coding-standard.html)
+###### 아래 코드는 찾아보니 있더라.. 약간 수정으로 사용가능.. [참고](https://robjmills.co.uk/2018/01/14/automatic-psr2-coding-standard.html)
 
 ````bash
 $ vi pre-commit
@@ -228,4 +230,4 @@ fi
 
 ---
 
-일단 요기까지 끄읕....
+###### 일단 요기까지 끄읕....
