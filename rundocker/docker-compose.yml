@@ -6,11 +6,11 @@ services:
 
     redis:
       image: redis:alpine
-      container_name: run-redis
+      container_name: dev-redis
 
     mariadb:
       image: mariadb:10.4
-      container_name: run-mariadb
+      container_name: dev-mariadb
       working_dir: /application
       volumes:
         - .:/application
@@ -24,7 +24,7 @@ services:
 
     webserver:
       image: nginx:alpine
-      container_name: run-webserver
+      container_name: dev-nginx
       working_dir: /application
       volumes:
           - ./www/ci4:/application
@@ -34,13 +34,9 @@ services:
 
     php-fpm:
       build: phpdocker/php-fpm
-      container_name: run-php-fpm
+      container_name: dev-php-fpm
       working_dir: /application
       volumes:
         - ./www/ci4:/application
-        - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
-        - ./phpdocker/php-fpm/xdebug.ini:/etc/php/7.4/fpm/conf.d/20-xdebug.ini
-      environment:
-        XDEBUG_CONFIG: "remote_host=192.168.1.91"
-
-
+        - ./phpdocker/php-fpm/php-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini
+        - ./phpdocker/php-fpm/xdebug-overrides.ini:/etc/php/7.4/fpm/conf.d/20-xdebug.ini
